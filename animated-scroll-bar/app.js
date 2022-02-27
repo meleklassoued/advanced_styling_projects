@@ -4,12 +4,12 @@ let progressValuePercentage = 0;
 
 btnLoading.addEventListener("click", () => {
   let interval = setInterval(() => {
-    if (progressValuePercentage <= 100) {
+    if (progressValuePercentage <= 115) {
       progressBar.style.width = `${progressValuePercentage}%`;
       progressValuePercentage += 1;
     } else {
-      clearInterval(interval);
-        
+       progressBar.style.width=`${0}%`
+       clearInterval(interval);
     }
   }, 50);
 });
