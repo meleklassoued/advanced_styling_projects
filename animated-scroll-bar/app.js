@@ -8,8 +8,9 @@ btnLoading.addEventListener("click", () => {
       progressBar.style.width = `${progressValuePercentage}%`;
       progressValuePercentage += 1;
     } else {
-       progressBar.style.width=`${0}%`
-       clearInterval(interval);
+      progressBar.style.width = `${0}%`;
+      clearInterval(interval);
+      history.go(0);
     }
   }, 50);
 });
