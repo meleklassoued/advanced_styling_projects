@@ -138,7 +138,7 @@ function progresUpdate() {
   }
 }
 function scurb(e) {
-  // If we use e.offsetX, we have trouble setting the song time, when the mousemove is running
+  //! If we use e.offsetX, we have trouble setting the song time, when the mousemove is running
   const currentTime =
     ((e.clientX - progres.getBoundingClientRect().left) / progres.offsetWidth) *
     song.duration;
@@ -155,7 +155,9 @@ function durationSongs() {
     .append(playerSongTime);
 }
 changeSliderContext();
-// add events
+/* -------------------------------------------------------------------------- */
+/*                                 add events                                 */
+/* -------------------------------------------------------------------------- */
 sliderContext.addEventListener("click", openPlayer);
 sliderContext.addEventListener(
   "animationend",
